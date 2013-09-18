@@ -83,7 +83,7 @@ function getRhyme(word) {
 
 $('#generate').click(function() { generate(); });
 if (sharing.gup('word') === '') {
-  getWords();
+  generate();
 }
 else {
   var tycho = sharing.decodeStr(unescape(sharing.gup('word')).split('$')[0]).titleize().replace('Like','like').replace('Amirite','amirite');
