@@ -91,7 +91,7 @@ if (sharing.gup('word') === '') {
   generate();
 }
 else {
-  var tycho = sharing.decodeStr(unescape(sharing.gup('word')).split('$')[0]).titleize().replace('Like','like').replace('Amirite','amirite');
+  var tycho = sharing.decodeStr(unescape(sharing.gup('word')).split('$')[0]).replace(/\+/g,' ').titleize().replace('Like','like').replace('Amirite','amirite');
   var gabe = sharing.decodeStr(unescape(sharing.gup('word')).split('$')[1]).humanize();
   console.log(tycho, gabe);
   $('#tycho').text(tycho);
