@@ -1,0 +1,35 @@
+body {
+  margin: 30px;
+  font-family: sans-serif;
+}
+h1 {
+  margin-bottom: -20px;
+}
+h2 {
+  color: rgba(0,0,0,0.5);
+}
+h3 {
+  margin-top: -20px;
+  color: rgba(0,0,0,0.5);
+}
+a {
+  color: rgba(0,0,255,0.45);
+}
+#content {
+  position: relative;
+}
+#tycho {
+  position: absolute;
+  top: 43px;
+  width: 170px;
+  left: 50px;
+  font-size: 14px;
+  text-align: center;
+}
+#gabe {
+  position: absolute;
+  top: 94px;
+  width: 150px;
+  text-align: center;
+  left: 587px;
+}
