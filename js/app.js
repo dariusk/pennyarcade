@@ -1,7 +1,8 @@
 /* global sharing */
 var nouns = [],
     verbs = [],
-    title = '';
+    title = '',
+    lastGabe = '';
 
 Array.prototype.pick = function() {
   return this[Math.floor(Math.random()*this.length)];
@@ -29,6 +30,10 @@ function generate(tycho, gabe) {
           var tycho = title + '? More like ' + newtitle + ', amirite?';
           $('#tycho').text(tycho);
           var gabe = badwords.pick().replace(/[aeiou]/,'*').humanize()+'.';
+          while (gabe === lastGabe) {
+            gabe = badwords.pick().replace(/[aeiou]/,'*').humanize()+'.';
+          }
+          lastGabe = gabe;
           $('#gabe').text(gabe);
           var shareUrl = window.location.href.split('?')[0]+'?word='+sharing.encodeStr(tycho)+'$'+sharing.encodeStr(gabe);
           $('#share').attr('href', shareUrl);
